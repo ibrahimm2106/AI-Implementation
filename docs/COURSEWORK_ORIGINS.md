@@ -1,50 +1,49 @@
-# Coursework and lab origins
+# Coursework and Lab Origins
 
-This repository is a professional refactor of the AI Implementation work completed during a BEng Software Engineering module.
+This repository is a professional portfolio presentation of work completed in the **AI Implementation and Impact in Software Engineering** module of a BEng Software Engineering degree.
+
+## Original work preserved
+
+The repository keeps student-produced coursework and practical evidence alongside the portfolio refactor:
+
+- Coursework 1 notebook/source snapshot, report text, summary statistics and visual evidence
+- Coursework 2 notebook/source snapshot, report text and machine-readable result outputs
+- Lab 02 preprocessing notebook/source + processed-data evidence
+- Lab 07 clustering notebook/source + rendered Ward dendrogram
+- Lab 08 decision-tree notebook/source + recorded predictions
+- Lab 10 TensorFlow/Keras MNIST notebook/source + rendered learning/prediction evidence
+
+University instruction/assessment PDFs are not duplicated in the public codebase. Instead, [`ASSESSMENT_MAPPING.md`](ASSESSMENT_MAPPING.md) summarises how the repository evidence maps to the required skills and tasks.
 
 ## Coursework 1 — data preparation
 
-The first coursework focused on defining an ML problem, understanding a dataset, cleaning data, handling missing values, encoding categorical features, scaling numeric features, visualising patterns, and exporting a processed dataset.
-
-The original Telco churn notebook performed those steps successfully, but used machine-specific Windows paths and transformed the complete dataset before later modelling. The portfolio version keeps the useful cleaning logic while moving learned transformations into training pipelines.
+The first coursework covered dataset exploration, missing-value handling, categorical encoding, scaling, visualisation and export of processed data. It established the Telco Customer Churn project used again in Coursework 2.
 
 ## Coursework 2 — modelling and evaluation
 
-The second coursework required at least three supervised models, parameter tuning, k-fold cross-validation, suitable classification metrics, visual comparisons, critical analysis, and an ethical discussion.
+The second coursework expanded the project into supervised classification with multiple models, hyperparameter tuning, stratified cross-validation, confusion matrices, ROC-AUC, interpretability, threshold analysis and calibration.
 
-The submitted work went further by experimenting with:
+## Lab progression
 
-- Logistic Regression
-- Random Forest
-- SVM
-- KNN
-- MLP neural network
-- a dummy baseline
-- confusion matrices and ROC curves
-- feature importance and linear coefficients
-- threshold analysis
-- probability calibration and Brier score
+The practical work broadens the portfolio beyond a single case study:
 
-Those ideas are preserved in the portfolio architecture, but organised into reusable Python modules rather than one large notebook.
+- **Lab 02:** preprocessing fundamentals
+- **Lab 07:** clustering and hierarchical methods
+- **Lab 08:** interpretable tree-based classification
+- **Lab 10:** neural networks with TensorFlow/Keras and MNIST
 
-## Lab 02 — preprocessing
+## Later portfolio improvements
 
-Used as the basis for the standalone preprocessing example covering missing-value assessment, median/constant imputation, feature scaling, one-hot encoding, and processed-data export.
+The following were added after the original coursework to improve GitHub presentation and software-engineering quality:
 
-## Lab 07 — clustering
+- reusable package under `src/`
+- CLI experiment and prediction scripts
+- automated tests
+- GitHub Actions CI and portfolio checks
+- Docker and Makefile support
+- architecture/results/recruiter documentation
+- model card and responsible-AI discussion
+- cleaned standalone versions of lab exercises
+- code screenshots and rendered output evidence
 
-The learning material introduced Euclidean distance, K-means, centroids, and hierarchical clustering. The exercise used ten 2D points with Ward linkage and a dendrogram. The portfolio script keeps that exercise and adds a compact K-means comparison.
-
-## Lab 08 — decision trees
-
-The practical task used a hiring dataset, categorical encoding, a `DecisionTreeClassifier`, two sample predictions, and readable tree rules. The portfolio version removes hard-coded local paths and wraps preprocessing and classification into a reusable pipeline.
-
-## Lab 10 — neural networks
-
-The lab introduced TensorFlow/Keras tensors, flatten and dense layers, ReLU, softmax, MNIST training, validation curves, predictions, confusion matrices, and inspection of hidden-layer representations.
-
-The portfolio version provides a clean MNIST training script and makes TensorFlow an optional dependency so the main repository stays lightweight.
-
-## Public-repository hygiene
-
-University assessment briefs, marked reports, submission ZIPs, student identifiers, absolute local file paths, and notebook checkpoint files are intentionally not published. They were used as source material for the refactor, while the public repository contains the reusable engineering work.
+This distinction is intentional: the repository shows both **what was submitted** and **how the work was later engineered into a stronger portfolio artefact**.

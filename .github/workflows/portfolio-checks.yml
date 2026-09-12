@@ -1,0 +1,46 @@
+name: Portfolio Checks
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+jobs:
+  validate-evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate notebooks and required portfolio files
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          notebooks = list(Path('.').rglob('*.ipynb'))
+          assert notebooks, 'No notebooks found'
+          for notebook in notebooks:
+              with notebook.open(encoding='utf-8') as handle:
+                  json.load(handle)
+              print(f'OK notebook: {notebook}')
+
+          required = [
+              'coursework/coursework-1/README.md',
+              'coursework/coursework-1/report/Coursework_1_Report.md',
+              'coursework/coursework-2/README.md',
+              'coursework/coursework-2/outputs/final_results_summary.csv',
+              'labs/original/lab10/Lab_10_MNIST_Neural_Network.ipynb',
+              'docs/RESULTS.md',
+              'docs/images/portfolio/cw2_model_comparison.svg',
+              'MODEL_CARD.md',
+          ]
+          missing = [path for path in required if not Path(path).exists()]
+          assert not missing, f'Missing required portfolio files: {missing}'
+          print(f'Validated {len(notebooks)} notebooks and {len(required)} required assets.')
+          PY
