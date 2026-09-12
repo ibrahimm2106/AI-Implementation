@@ -1,12 +1,12 @@
 # Coursework 1 — Telco Customer Churn Data Preparation
 
-[![Notebook](https://img.shields.io/badge/Original-Notebook-F37626?logo=jupyter&logoColor=white)](original/Coursework_1_Telco_Preprocessing.ipynb)
+[![Notebook](https://img.shields.io/badge/Notebook-Portfolio_Edition-F37626?logo=jupyter&logoColor=white)](original/Coursework_1_Telco_Preprocessing.ipynb)
 [![Report](https://img.shields.io/badge/Report-Markdown-083fa1?logo=markdown&logoColor=white)](report/Coursework_1_Report.md)
 [![Outputs](https://img.shields.io/badge/Outputs-Visuals%20%2B%20CSV-2DA44E)](../../docs/RESULTS.md)
 
-Coursework 1 establishes the data-preparation stage of the Telco churn project. The original submission uses Python, pandas, NumPy, Matplotlib, Seaborn and scikit-learn to inspect, clean, transform, visualise and export the data for later machine-learning work.
+Coursework 1 establishes the data-preparation stage of the Telco churn project. The uploaded submission used Python, pandas, NumPy, Matplotlib, Seaborn and scikit-learn to inspect, clean, transform, visualise and export the data for later machine-learning work.
 
-## Original workflow
+## Coursework workflow
 
 1. Load the Telco Customer Churn dataset.
 2. Inspect shape, data types, missing values and duplicates.
@@ -20,15 +20,15 @@ Coursework 1 establishes the data-preparation stage of the Telco churn project. 
 10. Produce descriptive statistics and visualisations.
 11. Export the processed dataset for Coursework 2.
 
-## Original code snapshot
+## Code snapshot
 
 ![Coursework 1 code](../../docs/images/code/coursework1_preprocessing_code.svg)
 
-## Original output — churn distribution
+## Recorded output — churn distribution
 
 ![Churn distribution](../../docs/images/portfolio/cw1_churn_distribution.svg)
 
-## Files preserved
+## Files published
 
 ```text
 coursework-1/
@@ -41,14 +41,14 @@ coursework-1/
     └── telco_summary_statistics.csv
 ```
 
-The original notebook is kept as the primary executable coursework artefact. The report is published as a GitHub-friendly Markdown edition, and the repository uses lightweight SVG evidence on the main pages so reviewers do not need to download large binary files.
+The notebook and Python file are **GitHub-friendly portfolio editions based on the uploaded coursework**, with machine-specific paths removed so the logic can be reviewed more easily. The report is a Markdown portfolio edition, and lightweight SVG evidence is rendered directly on GitHub.
 
 ## Portfolio engineering improvement
 
-The original coursework performs preprocessing on the complete dataset because its focus was data preparation. The portfolio package under [`../../src/ai_portfolio/`](../../src/ai_portfolio/) improves the later modelling workflow by moving learned transformations such as imputation, scaling and encoding **inside scikit-learn pipelines**, so they are fitted within the training folds during cross-validation.
+The coursework performs preprocessing on the complete dataset because its focus was data preparation. The portfolio package under [`../../src/ai_portfolio/`](../../src/ai_portfolio/) improves the later modelling workflow by moving learned transformations such as imputation, scaling and encoding **inside scikit-learn pipelines**, so they are fitted within the training folds during cross-validation.
 
-This preserves the original academic work while demonstrating a stronger leakage-aware production pattern.
+This keeps the academic work traceable while demonstrating a stronger leakage-aware engineering pattern.
 
 ## Academic note
 
-This directory preserves original coursework evidence for portfolio provenance. It is not provided as a template for other students to submit.
+This directory is published as coursework provenance and portfolio evidence. It is not provided as a template for other students to submit.

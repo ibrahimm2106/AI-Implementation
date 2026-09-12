@@ -1,10 +1,10 @@
 # Coursework 2 — Telco Churn Machine Learning Models
 
-[![Notebook](https://img.shields.io/badge/Original-Notebook-F37626?logo=jupyter&logoColor=white)](original/Coursework_2_Final.ipynb)
+[![Notebook](https://img.shields.io/badge/Notebook-Portfolio_Edition-F37626?logo=jupyter&logoColor=white)](original/Coursework_2_Final.ipynb)
 [![Report](https://img.shields.io/badge/Report-Markdown-083fa1?logo=markdown&logoColor=white)](report/Coursework_2_Report.md)
 [![Results](https://img.shields.io/badge/Results-CSV%20%2B%20SVG-2DA44E)](outputs/)
 
-Coursework 2 continues the Telco churn project with supervised machine learning. The original submission compares multiple model families, tunes hyperparameters with stratified cross-validation, evaluates the hold-out test set and produces visual/model-interpretation outputs.
+Coursework 2 continues the Telco churn project with supervised machine learning. The uploaded submission compares multiple model families, tunes hyperparameters with stratified cross-validation, evaluates the hold-out test set and produces visual/model-interpretation outputs.
 
 ## Models evaluated
 
@@ -17,7 +17,7 @@ Coursework 2 continues the Telco churn project with supervised machine learning.
 
 ## Validation and evaluation
 
-The original notebook uses a stratified train/test split and **3-fold `StratifiedKFold`** during tuning. F1 is the main tuning score because the churn class is the minority, while accuracy, precision, recall and ROC-AUC are retained for comparison.
+The submitted experiment uses a stratified train/test split and **3-fold `StratifiedKFold`** during tuning. F1 is the main tuning score because the churn class is the minority, while accuracy, precision, recall and ROC-AUC are retained for comparison.
 
 ### Tuned cross-validation summary
 
@@ -31,7 +31,7 @@ The original notebook uses a stratified train/test split and **3-fold `Stratifie
 
 ### Final selected model
 
-Random Forest was selected by CV F1. The original final test artifact reports:
+Random Forest was selected by CV F1. The recorded final test artifact reports:
 
 | Metric | Result |
 |---|---:|
@@ -42,7 +42,7 @@ Random Forest was selected by CV F1. The original final test artifact reports:
 | ROC-AUC | **0.8226** |
 | Brier score | **0.1454** |
 
-## Original code snapshot
+## Code snapshot
 
 ![Coursework 2 code](../../docs/images/code/coursework2_model_comparison_code.svg)
 
@@ -60,19 +60,19 @@ Random Forest was selected by CV F1. The original final test artifact reports:
 
 ## Result files preserved
 
-The `outputs/` directory keeps the machine-readable evidence used for the portfolio:
+The `outputs/` directory keeps the machine-readable result evidence from the coursework analysis:
 
 - `model_evaluation_results.csv` — hold-out comparison across candidate models.
 - `tuned_model_results_fast.csv` — tuned stratified-CV results.
 - `final_results_summary.csv` — combined selected-model summary.
 - `final_test_metrics_best_model.csv` — final Random Forest test metrics.
-- `rf_feature_importance.csv` — original tree importance values.
-- `lr_coefficients.csv` — original Logistic Regression coefficients.
+- `rf_feature_importance.csv` — tree importance values.
+- `lr_coefficients.csv` — Logistic Regression coefficients.
 - `brier_score_best_model.csv` — calibration error summary.
 
-The README renders lightweight SVG versions of the most useful original visual outputs so the repository stays fast to browse.
+The README renders lightweight SVG versions of the most useful visual outputs so the repository stays fast to browse.
 
-## Files preserved
+## Files published
 
 ```text
 coursework-2/
@@ -93,8 +93,8 @@ coursework-2/
 
 ## From coursework to engineering portfolio
 
-The submitted notebook is intentionally retained as evidence. The reusable implementation under [`../../src/ai_portfolio/`](../../src/ai_portfolio/) separates data loading, preprocessing, model definitions, evaluation and interpretation into modules that can be tested and reused from the command line.
+The notebook and Python file are **GitHub-friendly portfolio editions based on the uploaded final coursework**, while the result CSVs retain the recorded experiment outputs. The reusable implementation under [`../../src/ai_portfolio/`](../../src/ai_portfolio/) separates data loading, preprocessing, model definitions, evaluation and interpretation into modules that can be tested and reused from the command line.
 
 ## Academic note
 
-This directory preserves original coursework evidence for portfolio provenance. It is not provided as a template for other students to submit.
+This directory is published as coursework provenance and portfolio evidence. It is not provided as a template for other students to submit.
