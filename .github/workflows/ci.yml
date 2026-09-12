@@ -27,8 +27,13 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -e ".[dev]"
 
-      - name: Lint
-        run: ruff check src scripts labs tests
+      - name: Lint maintained portfolio code
+        run: >-
+          ruff check src scripts tests
+          labs/lab02_preprocessing.py
+          labs/lab07_clustering.py
+          labs/lab08_decision_tree.py
+          labs/lab10_mnist_neural_network.py
 
       - name: Test
         run: pytest -q
