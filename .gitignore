@@ -1,0 +1,20 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.DS_Store
+
+# Generated data / ML artifacts
+artifacts/
+*.joblib
+*.pkl
+
+# Local datasets
+data/*.csv
+data/*.xlsx
+!data/README.md
+
+# Notebook noise
+*.nbconvert.ipynb
